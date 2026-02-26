@@ -15,11 +15,10 @@ return(
 const style = StyleSheet.create({
 
     cont:{
-        width:"90%",
-        height:"50%",
-        backgroundColor:"#46440c6a",
+        flex:1,
         justifyContent:"center",
         alignItems:"center",
+        backgroundColor:"#000000"
     }
 
 

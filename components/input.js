@@ -20,8 +20,8 @@ const style = StyleSheet.create({
         height:50,
         borderWidth:3,
         borderRadius:10,
-        borderColor:"#cc2222",
-        color:"#ffff",
+        borderColor:"#cec401",
+        color:"#ffffff",
         backgroundColor:"black",
 
 
