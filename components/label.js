@@ -1,7 +1,19 @@
 import { Text, StyleSheet } from "react-native";
-
+import { useFonts } from "expo-font";
 
 export default function Texto({txt}){
+
+    const [fonts] = useFonts({
+
+        'teste':require('../assets/fonts/teste.ttf')
+
+    })
+
+if(!fonts){
+
+    return null;
+}
+
 return(
 
 <Text style={style.label}>{txt}</Text>
@@ -20,6 +32,7 @@ const style = StyleSheet.create({
         color:"#ffff",
         marginLeft:20,
         margin:10,
+        fontFamily:"teste",
     }
 
 
