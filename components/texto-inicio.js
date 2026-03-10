@@ -1,7 +1,7 @@
 import { Text, StyleSheet } from "react-native";
 import { useFonts } from "expo-font";
 
-export default function Texto({txt}){
+export default function Texto_inicio({txt}){
 
     const [fonts] = useFonts({
 
@@ -30,7 +30,7 @@ const style = StyleSheet.create({
         alignSelf:"flex-start",
         fontSize:25,
         color:"#ffff",
-        marginLeft:20,
+        marginLeft:60,
         margin:10,
         fontFamily:"teste",
     }

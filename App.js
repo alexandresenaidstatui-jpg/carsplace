@@ -4,6 +4,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import Login from "./pages/login";
 import cadastro from "./pages/cadastro";
+import inicio from "./pages/inicio";
+import Splash from "./pages/splash";
 
 
 export default function App(){
@@ -12,9 +14,11 @@ export default function App(){
   return(
 
     <NavigationContainer>
-<Stack.Navigator initialRouteName="Login">
-<Stack.Screen name="Login" component={Login} />
-<Stack.Screen name="Cadastro" component={cadastro} />
+<Stack.Navigator initialRouteName="Splash">
+  <Stack.Screen name="Splash" component={Splash} options={{headerTransparent:true, headerTitle:""}}/>
+<Stack.Screen name="Login" component={Login}options={{headerTransparent:true, headerTitle:""}} />
+<Stack.Screen name="Cadastro" component={cadastro}options={{headerTransparent:true, headerTitle:""}} />
+<Stack.Screen name="Inicio" component={inicio}options={{headerTransparent:true, headerTitle:""}} />
 </Stack.Navigator>
     </NavigationContainer>
  

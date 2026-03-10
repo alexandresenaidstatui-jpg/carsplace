@@ -11,12 +11,15 @@ export default function cadastro({navigation}){
       
    <Container>
  <Titulo tit={"XLmotors"}/>
-      <Texto txt={"Usuário"} />
+      <Texto txt={"Numero ou email"} />
       <Input/>
-      <Texto txt={"Senha"} />
+       <Texto txt={"criar senha"} />
       <Input/>
-      <Botao titulo={"logar"}/>
-      <Texto txt={"não tem conta? Criar conta"} />
+      <Texto txt={"confirmar senha"} />
+        <Input/>
+      <Texto txt={"confirmar senha"} />
+      <Input/>
+      <Botao titulo={"criar"}/>
     </Container>  
    
   );

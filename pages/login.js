@@ -11,7 +11,7 @@ export default function Login({navigation}){
       
    <Container>
  <Titulo tit={"XLmotors"}/>
-      <Texto txt={"Usuário"} />
+      <Texto txt={"EMAIL"} />
       <Input/>
       <Texto txt={"Senha"} />
       <Input/>
