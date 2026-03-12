@@ -25,7 +25,7 @@ return(
 
 
 // <ImageBackground source={{uri:'https://i.pinimg.com/736x/2d/fe/a8/2dfea800fcfb871253e405f345a68780.jpg'}}> */}
-<ImageBackground source={require('../assets/logo.png')} style={style.ImgBack}>
+<ImageBackground source={require('../assets/teste.png')} style={style.ImgBack}>
 
 
 </ImageBackground>
@@ -40,6 +40,7 @@ const style = StyleSheet.create({
 
     ImgBack:{
         flex:1,
+        width:500,
         justifyContent:"center",
         alignitems:"center",
 
