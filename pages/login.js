@@ -1,14 +1,31 @@
-import React from "react";
-import {
-  View,
-  Text,
-  TextInput,
+import React, { useState } from 'react';
+import { 
+  StyleSheet, 
+  Text, 
+  View, 
+  TextInput, 
   TouchableOpacity,
-  StyleSheet,
-  Image
-} from "react-native";
+  Image, 
+  Alert
+} from 'react-native';
 
-export default function Login({ navigation }) {
+export default function Login({navigation}) {
+
+  const [user, setUser] = useState("");
+  const [pass, setPass] = useState("");
+
+  function Logar(){
+    if(user === "" || pass === ""){
+      Alert.alert("ERRO", "Favor preencher todos os campos!");
+    } 
+    else if(user === "Matheus" && pass === "123"){
+      Alert.alert("Sucesso!", "Usuário logado com sucesso!");
+      navigation.navigate("Welcome");
+    } 
+    else{
+      Alert.alert("ERRO!", "Usuário não cadastrado!");
+    }
+  }
 
   return (
     <View style={styles.container}>
@@ -21,20 +38,25 @@ export default function Login({ navigation }) {
       <Text style={styles.titulo}>XLmotors</Text>
       <Text style={styles.subtitulo}>Automóveis de luxo</Text>
 
-      <TextInput
-        placeholder="Email"
-        placeholderTextColor="#999"
-        style={styles.input}
-      />
+      <TextInput 
+            style={styles.input} 
+            placeholder="Usuário" 
+            placeholderTextColor="#888"
+            value={user}
+            onChangeText={setUser}
+          />
 
-      <TextInput
-        placeholder="Senha"
-        placeholderTextColor="#999"
-        secureTextEntry
-        style={styles.input}
-      />
+       <TextInput 
+            style={styles.input} 
+            placeholder="Senha" 
+            placeholderTextColor="#888" 
+            secureTextEntry={true}
+            value={pass}
+            onChangeText={setPass}
+          />
 
-      <TouchableOpacity style={styles.botao}>
+
+      <TouchableOpacity style={styles.botao}onPress={Logar}>
         <Text style={styles.textoBotao}>Entrar</Text>
       </TouchableOpacity>
 
