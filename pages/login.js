@@ -18,7 +18,7 @@ export default function Login({navigation}) {
     if(user === "" || pass === ""){
       Alert.alert("ERRO", "Favor preencher todos os campos!");
     } 
-    else if(user === "Matheus" && pass === "123"){
+    else if(user === "Alexandre" && pass === "123"){
       Alert.alert("Sucesso!", "Usuário logado com sucesso!");
       navigation.navigate("Welcome");
     } 
@@ -56,7 +56,7 @@ export default function Login({navigation}) {
           />
 
 
-      <TouchableOpacity style={styles.botao}onPress={Logar}>
+      <TouchableOpacity style={styles.botao}onPress={(Logar)=> navigation.navigate("Inicio")}>
         <Text style={styles.textoBotao}>Entrar</Text>
       </TouchableOpacity>
 
